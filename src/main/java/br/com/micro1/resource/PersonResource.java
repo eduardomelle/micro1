@@ -21,9 +21,13 @@ public class PersonResource {
 		ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8082/address",
 				String.class);
 
-		LOG.info("MICRO1");
+		// ResponseEntity<String> re = restTemplate.getForEntity("http://127.0.0.1:8080/micro3-0.0.1-SNAPSHOT/phone", String.class);
 
-		return "Eduardo Orlandi Melle - " + responseEntity.getBody();
+		LOG.info("PERSON");
+		LOG.warn("PERSON");
+		LOG.error("PERSON");
+
+		return "Eduardo Orlandi Melle - " + responseEntity.getBody() + " - (11) 99620-1490";
 	}
 
 }

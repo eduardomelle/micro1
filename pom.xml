@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -21,7 +20,6 @@
 	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -39,30 +37,33 @@
 			</exclusions>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.opentracing.contrib/opentracing-spring-cloud-core -->
 		<dependency>
 			<groupId>io.opentracing.contrib</groupId>
-			<artifactId>opentracing-spring-web-autoconfigure</artifactId>
-			<version>0.0.4</version>
+			<artifactId>opentracing-spring-cloud-core</artifactId>
+			<version>0.5.5</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.opentracing.contrib/opentracing-spring-cloud-starter -->
 		<dependency>
-			<groupId>com.uber.jaeger</groupId>
-			<artifactId>jaeger-core</artifactId>
-			<version>0.18.0</version>
+			<groupId>io.opentracing.contrib</groupId>
+			<artifactId>opentracing-spring-cloud-starter</artifactId>
+			<version>0.5.5</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.opentracing.contrib/opentracing-spring-zipkin-web-starter -->
+		<dependency>
+			<groupId>io.opentracing.contrib</groupId>
+			<artifactId>opentracing-spring-zipkin-cloud-starter</artifactId>
+			<version>0.2.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.opentracing.brave/brave-opentracing -->
 		<dependency>
 			<groupId>io.opentracing.brave</groupId>
 			<artifactId>brave-opentracing</artifactId>
-			<version>0.20.0</version>
+			<version>0.37.2</version>
 		</dependency>
-
-		<dependency>
-			<groupId>io.zipkin.reporter</groupId>
-			<artifactId>zipkin-sender-okhttp3</artifactId>
-			<version>0.10.0</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
